@@ -50,7 +50,15 @@ export default function Home() {
           const xDiff = slotPos.x - diskPos.x - 4.5;
           const yDiff = slotPos.y - diskPos.y - 10;
 
-          ClickAnimatonFloppy(title, diskRef, xDiff, yDiff, navigate, textRef);
+          ClickAnimatonFloppy(
+            title,
+            diskRef,
+            xDiff,
+            yDiff,
+            navigate,
+            textRef,
+            PCRef,
+          );
         },
       });
     }
@@ -58,7 +66,7 @@ export default function Home() {
   return (
     <>
       {" "}
-      <div className="body border-box flex flex-col m-0 w-full min-h-[100dvh]">
+      <div className="body grid-bg border-box flex flex-col m-0 w-full min-h-[100dvh]">
         <section
           ref={HeroRef}
           className="relative gap-2 flex flex-col py-10 px-4 justify-start items-center w-full min-h-[100dvh] snap-start border-box"

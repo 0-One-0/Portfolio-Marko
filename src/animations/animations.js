@@ -7,10 +7,11 @@ export default function ClickAnimatonFloppy(
   yDiff,
   navigate,
   textRef,
+  PCRef,
 ) {
   const tl = gsap.timeline({
     onComplete: () => {
-      AnimateScreen(textRef, title, navigate);
+      AnimateScreen(textRef, title, navigate, PCRef);
     },
   });
 
@@ -43,9 +44,9 @@ export default function ClickAnimatonFloppy(
     });
 }
 
-function AnimateScreen(textRef, title, navigate) {
+function AnimateScreen(textRef, title, navigate, PCRef) {
   const tl = gsap.timeline({
-    onComplete: () => setTimeout(() => navigate("/" + title), 1000),
+    onComplete: () => setTimeout(() => navigate("/" + title), 500),
   });
   gsap.set(textRef.current, {
     fontSize: 14,
@@ -92,9 +93,10 @@ function AnimateScreen(textRef, title, navigate) {
       ease: "power1.inOut",
       duration: 1.5,
     })
-    .to(".body", {
+    .to(PCRef.current, {
+      scale: 0,
       opacity: 0,
-      duration: 0.3,
-      ease: "power4.inOut",
+      duration: 1,
+      ease: "power3.inOut",
     });
 }
