@@ -4,16 +4,39 @@ import FloppyDisk from "../components/FloppyDisk";
 import Hero from "../components/Hero";
 import ClickAnimatonFloppy from "../animations/animations";
 import { useNavigate } from "react-router";
+import { useGSAP } from "@gsap/react";
+import { initScroll } from "../animations/scroll";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
+  // Refs för scroll-triggers
+  const HeroRef = useRef(null);
+  const PCRef = useRef(null);
+
+  // Refs för disk-animationen
   const slotRef = useRef(null);
   const textRef = useRef(null);
+
   const navigate = useNavigate();
 
+  useGSAP(() => {
+    // Initierar all scroll-logik när komponenten mountas
+    // Alla refs är klara här eftersom useGSAP körs efter rendering
+    const smoother = initScroll(HeroRef, PCRef);
+
+    // Cleanup — körs när komponenten unmountas (t.ex. när man navigerar till en annan sida)
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+      if (smoother) smoother.kill();
+    };
+  }, []);
+
   const handleNav = (diskRef, title) => {
-    
+    //Hämta rätt x/y av diskets och slot
     const diskPos = diskRef.current.getBoundingClientRect();
     const slotPos = slotRef.current.getBoundingClientRect();
+
+    // Räknar ut diff
     const xDiff = slotPos.x - diskPos.x - 4.5;
     const yDiff = slotPos.y - diskPos.y - 10;
 
@@ -22,14 +45,20 @@ export default function Home() {
   return (
     <>
       {" "}
-      <div className="body border-box flex flex-col m-0 w-full min-h-screen bg-black/80">
-        <section className="relative gap-2 flex flex-col py-10 px-4 justify-start items-center w-full h-240 border-box">
+      <div className="body border-box flex flex-col m-0 w-full min-h-[100dvh]">
+        <section
+          ref={HeroRef}
+          className="relative gap-2 flex flex-col py-10 px-4 justify-start items-center w-full min-h-[100dvh] snap-start border-box"
+        >
           <Hero />
         </section>
 
-        <section className="gap-2 flex flex-col p-2 justify-center items-center mt-8 w-full h-240 border-box">
+        <section
+          ref={PCRef}
+          className="gap-2 flex flex-col p-2 justify-center items-center w-full min-h-[100dvh] snap-start border-box"
+        >
           <Computer slotRef={slotRef} textRef={textRef} />
-          <div className="floppy-section flex">
+          <div className="floppy-section flex ">
             <FloppyDisk
               title={"Projects"}
               bgColor={"bg-black"}

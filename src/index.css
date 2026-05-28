@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-retro: 'VT323', monospace;
-  --font-mono-retro: 'Space Mono', monospace;
+  --font-retro: "VT323", monospace;
+  --font-mono-retro: "Space Mono", monospace;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.80);
 }
