@@ -24,7 +24,7 @@ export default function ClickAnimatonFloppy(
       curviness: 0,
     },
     scale: 0.5,
-
+    rotate: 0,
     duration: 1.7,
     ease: "power3.out",
   })
@@ -35,7 +35,7 @@ export default function ClickAnimatonFloppy(
     })
     .to(gsap.utils.toArray(".floppyDisk-container"), {
       opacity: 0,
-      duration: 0.2,
+      duration: 0.1,
       ease: "power4.inOut",
     })
     .to(".floppy-section", {
@@ -48,11 +48,11 @@ function AnimateScreen(textRef, title, navigate) {
     onComplete: () => setTimeout(() => navigate("/" + title), 1000),
   });
   gsap.set(textRef.current, {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
   });
   gsap.set(".title-screen", {
-    fontSize: 14,
+    fontSize: 16,
     textAlign: "center",
   });
 
@@ -91,7 +91,8 @@ function AnimateScreen(textRef, title, navigate) {
       text: title + "..",
       ease: "power1.inOut",
       duration: 1.5,
-    }).to(".body", {
+    })
+    .to(".body", {
       opacity: 0,
       duration: 0.3,
       ease: "power4.inOut",

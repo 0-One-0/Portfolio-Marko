@@ -14,3 +14,17 @@ body{
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.80);
 }
+
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.1) 0px,
+    rgba(0,0,0,0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.rustBack{
+  background: linear-gradient(to bottom, #d4d0b8, #C4C0AA, #a8a496);
+}

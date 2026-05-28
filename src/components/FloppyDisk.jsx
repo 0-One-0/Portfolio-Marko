@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
-export default function FloppyDisk({ title, bgColor, acColor, handleNav }) {
+export default function FloppyDisk({ title, bgColor, acColor, handleNav, position, rotaion }) {
   const diskRef = useRef(null);
   useGSAP(
     () => {
@@ -22,7 +22,7 @@ export default function FloppyDisk({ title, bgColor, acColor, handleNav }) {
       <div
         onClick={() => handleNav(diskRef, title)}
         ref={diskRef}
-        className={`floppyDisk-container flex ${bgColor} flex-col w-26 h-29 p-2 rounded-tr-xl rounded-sm gap-3 items-center pt-0 pb-0 box-border border-1 border-white/40`}
+        className={`floppyDisk-container flex ${bgColor} ${position} ${rotaion} flex-col w-26 h-29 p-2 rounded-tr-xl rounded-sm gap-3 items-center pt-0 pb-0 box-border border-1 border-white/40`}
       >
         <div
           className={` ${acColor} h-8 w-20 p-1 flex justify-end px-1 rounded-b-sm`}
