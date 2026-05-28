@@ -14,7 +14,7 @@ export default function ClickAnimatonFloppy(
       AnimateScreen(textRef, title, navigate, PCRef);
     },
   });
-
+  
   tl.to(diskRef.current, {
     motionPath: {
       path: [

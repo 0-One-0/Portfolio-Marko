@@ -40,6 +40,7 @@ export default function Home() {
       gsap.to(diskRef.current, {
         marginTop: 0,
         rotate: 0,
+        zIndex: 1,
         duration: 0.5,
         ease: "power3.inOut",
         onComplete: () => {
@@ -66,17 +67,17 @@ export default function Home() {
   return (
     <>
       {" "}
-      <div className="body grid-bg border-box flex flex-col m-0 w-full min-h-[100dvh]">
+      <div className="body grid-bg border-box flex flex-col m-0 w-full min-h-dvh">
         <section
           ref={HeroRef}
-          className="relative gap-2 flex flex-col py-10 px-4 justify-start items-center w-full min-h-[100dvh] snap-start border-box"
+          className="relative gap-2 flex flex-col py-10 px-4 justify-start items-center w-full min-h-dvh snap-start border-box"
         >
           <Hero />
         </section>
 
         <section
           ref={PCRef}
-          className="gap-0 flex flex-col p-2 justify-center items-center w-full min-h-[100dvh] snap-start border-box"
+          className="gap-0 flex flex-col p-2 justify-center items-center w-full min-h-dvh snap-start border-box"
         >
           <Computer slotRef={slotRef} textRef={textRef} />
           <div className="floppy-section flex mt-0 ">

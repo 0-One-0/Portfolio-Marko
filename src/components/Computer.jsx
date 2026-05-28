@@ -22,7 +22,7 @@ export default function Computer({ slotRef, textRef }) {
             ref={slotRef}
             className="floppy-disk bg-black w-15 h-1 rounded-sm "
           ></div>
-          <button className="On-btn bg-[#C4C0AA] p-1 w-5 h-5 rounded-full flex items-center justify-center border-1 border-stone-400">
+          <button className="On-btn bg-[#C4C0AA] p-1 w-5 h-5 rounded-full flex items-center justify-center border border-stone-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

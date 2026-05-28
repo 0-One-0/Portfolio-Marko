@@ -22,7 +22,7 @@ export default function FloppyDisk({ title, bgColor, acColor, handleNav, positio
       <div
         onClick={() => handleNav(diskRef, title)}
         ref={diskRef}
-        className={`floppyDisk-container flex ${bgColor} ${position} ${rotaion} flex-col w-26 h-29 p-2 rounded-tr-xl rounded-sm gap-3 items-center pt-0 pb-0 box-border border-1 border-white/40`}
+        className={`floppyDisk-container flex ${bgColor} ${position} ${rotaion} flex-col w-26 h-29 p-2 rounded-tr-xl rounded-sm gap-3 items-center pt-0 pb-0 box-border border border-white/40`}
       >
         <div
           className={` ${acColor} h-8 w-20 p-1 flex justify-end px-1 rounded-b-sm`}
