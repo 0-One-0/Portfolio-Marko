@@ -48,8 +48,8 @@ export default function Home() {
           const slotPos = slotRef.current.getBoundingClientRect();
 
           // Räknar ut diff
-          const xDiff = slotPos.x - diskPos.x - 4.5;
-          const yDiff = slotPos.y - diskPos.y - 10;
+          const xDiff = slotPos.x - diskPos.x - 19;
+          const yDiff = slotPos.y - diskPos.y - 13;
 
           ClickAnimatonFloppy(
             title,
@@ -67,7 +67,7 @@ export default function Home() {
   return (
     <>
       {" "}
-      <div className="body grid-bg border-box flex flex-col m-0 w-full min-h-dvh">
+      <div className="body grid-bg border-box flex flex-col m-0 w-full min-h-dvh overflow-x-hidden">
         <section
           ref={HeroRef}
           className="relative gap-2 flex flex-col py-10 px-4 justify-start items-center w-full min-h-dvh snap-start border-box"

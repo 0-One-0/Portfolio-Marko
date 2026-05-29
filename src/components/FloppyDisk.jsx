@@ -6,13 +6,12 @@ export default function FloppyDisk({ title, bgColor, acColor, handleNav, positio
   useGSAP(
     () => {
       const tl = gsap.timeline();
-      gsap.set(diskRef.current, { scale: 0.7 });
+      gsap.set(diskRef.current, { scale: 0.8 });
       tl.from(diskRef.current, {
         duration: 1,
         ease: "power4.inOut",
         opacity: 0,
-      }).to(diskRef.current, {
-        
+        scale:0,
       });
     },
     { scope: diskRef },
@@ -22,7 +21,7 @@ export default function FloppyDisk({ title, bgColor, acColor, handleNav, positio
       <div
         onClick={() => handleNav(diskRef, title)}
         ref={diskRef}
-        className={`floppyDisk-container flex ${bgColor} ${position} ${rotaion} flex-col w-26 h-29 p-2 rounded-tr-xl rounded-sm gap-3 items-center pt-0 pb-0 box-border border border-white/40`}
+        className={`floppyDisk-container flex ${bgColor} ${position} ${rotaion} flex-col w-30 h-29 p-2 rounded-tr-xl rounded-sm gap-3 items-center pt-0 pb-0 box-border border border-white/40`}
       >
         <div
           className={` ${acColor} h-8 w-20 p-1 flex justify-end px-1 rounded-b-sm`}
@@ -31,8 +30,8 @@ export default function FloppyDisk({ title, bgColor, acColor, handleNav, positio
             <div className={`${acColor} h-4 w-2`}></div>
           </div>
         </div>
-        <div className="bg-yellow-50 h-17 w-20  pb-0 flex flex-col  justify-end items-center ">
-          <h3 className="floppyDisk-title text-base font-bold tracking-wide uppercase">
+        <div className="bg-yellow-50 h-17 w-25  pb-0 flex flex-col  justify-end items-center ">
+          <h3 className="floppyDisk-title text-base  font-marker  uppercase">
             {title}
           </h3>
         </div>
