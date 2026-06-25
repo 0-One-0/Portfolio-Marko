@@ -38,3 +38,10 @@ body{
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 30px 30px;
 }
+
+.dot-grid {
+  background-color: #f5f5f5;
+  background-image: radial-gradient(circle, #a0a0a0 1px, transparent 1px);
+  background-size: 20px 20px;
+  box-shadow: 3px 2px 4px rgba(128, 128, 128, 0.712) inset, -3px -2px 4px rgba(128, 128, 128, 0.692) inset ;
+}
