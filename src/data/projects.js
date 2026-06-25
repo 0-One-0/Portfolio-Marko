@@ -17,21 +17,5 @@ export const projects = [
     link: "http://localhost:5173/",
     image: PC,
     areas: ["React", "Vite", "Gsap", "React-Router", "Tailwind"],
-  },
-  {
-    title: "Portfolio",
-    description:
-      "A retro-themed personal portfolio built with a floppy disk navigation concept. Features GSAP animations, scroll snapping and a custom CRT computer component.",
-    link: "http://localhost:5173/",
-    image: PC,
-    areas: ["React", "Vite", "Gsap", "React-Router", "Tailwind"],
-  },
-  {
-    title: "No",
-    description:
-      "A retro-themed personal portfolio built with a floppy disk navigation concept. Features GSAP animations, scroll snapping and a custom CRT computer component.",
-    link: "http://localhost:5173/",
-    image: PC,
-    areas: ["React", "Vite", "Gsap", "React-Router", "Tailwind"],
-  },
+  }
 ];
