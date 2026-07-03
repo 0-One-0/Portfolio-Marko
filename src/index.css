@@ -48,3 +48,14 @@ body{
   background-size: 20px 20px;
   box-shadow: 3px 2px 4px rgba(128, 128, 128, 0.712) inset, -3px -2px 4px rgba(128, 128, 128, 0.692) inset ;
 }
+.contact-list{
+  color: white;
+  font-size: 19px;
+  font-family: var(--font-mono-retro);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-weight: 400;
+  
+}
