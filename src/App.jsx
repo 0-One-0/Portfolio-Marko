@@ -20,8 +20,12 @@ gsap.registerPlugin(
   ScrollToPlugin,
   ScrollSmoother,
 );
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
 
 function App() {
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />

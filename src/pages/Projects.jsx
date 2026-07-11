@@ -17,7 +17,7 @@ export default function Projects() {
 
   return (
     <>
-      <div className="grid-bg overflow-x-hidden relative border-box w-full gap-10 pt-4 min-h-dvh flex flex-col items-center justify-center">
+      <div className="grid-bg overflow-x-hidden relative border-box w-full gap-10 pt-4 pb-4 min-h-dvh flex flex-col items-center justify-center">
         <FloppyDisk
           title={"Home"}
           bgColor={"bg-black"}
