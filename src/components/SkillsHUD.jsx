@@ -9,6 +9,7 @@ import {
   Express,
   NodejsIcon,
   DockerIcon,
+  Javascript,
 } from "@dev.icons/react";
 
 import Skill from "./Skill";
@@ -28,6 +29,7 @@ export default function SkillsHUD({ref}) {
         <Skill styles={"bg-white"} title="Express.js" icon={<Express size="40" />} />
         <Skill styles={"bg-black"} title="Node.js" icon={<NodejsIcon size="40" />} />
         <Skill styles={"bg-black"} title="Docker" icon={<DockerIcon size="40" />} />
+        <Skill styles={"bg-black"} title="Javascript" icon={<Javascript size="40" />} />
       </div>
       </div>
     </>

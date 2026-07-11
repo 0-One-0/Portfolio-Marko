@@ -14,32 +14,39 @@ export default function Hero() {
           repeat: -1,
           yoyo: true,
           duration: 1,
-          ease: "power1.inOut"
-        })
-      }
+          ease: "power1.inOut",
+        });
+      },
     });
     tl.to(introRef.current, {
       text: "Hey, I'm Marko.",
       ease: "power3.inOut",
       duration: 2,
-    }).from(".marko-img",{
-      opacity:0,
-      ease: "power3.inOut",
-      duration: 1,
-    }, "<").to(underTextRef.current, {
-      text: "Frontend dev in the making. Pick a disk. Let's go.",
-      ease: "power3.inOut",
-      duration: 3,
-    }).from(".scroll-text, .arrow ", {
-      opacity:0,
-      stagger: 0.3,
-      ease: "power3.inOut",
-    });
+    })
+      .from(
+        ".marko-img",
+        {
+          opacity: 0,
+          ease: "power3.inOut",
+          duration: 1,
+        },
+        "<",
+      )
+      .to(underTextRef.current, {
+        text: "Frontend dev in the making. Pick a disk. Let's go.",
+        ease: "power3.inOut",
+        duration: 3,
+      })
+      .from(".scroll-text, .arrow ", {
+        opacity: 0,
+        stagger: 0.3,
+        ease: "power3.inOut",
+      });
   }, []);
   return (
     <>
       <img
-        src="src\assets\IMG_5357.PNG"
+        src="src\assets\PortPhoto.JPG"
         alt="Marko"
         className="w-70 rounded-lg mb-3 marko-img"
       />
@@ -57,7 +64,8 @@ export default function Hero() {
         <p className="scroll-text text-white font-mono-retro text-base w-70 text-center p-0 m-0 [text-shadow:0_4px_4px_black]">
           Scroll Down!
         </p>
-        <svg className="arrow absolute bottom-0 w-30 h-30 m-0 p-0"
+        <svg
+          className="arrow absolute bottom-0 w-30 h-30 m-0 p-0"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"

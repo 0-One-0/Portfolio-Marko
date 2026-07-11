@@ -12,8 +12,8 @@ export default function Contact() {
     navigate("/");
   };
   useGSAP(() => {
-    window.scrollTo(0, 0);//Makes sure we always scroll to the to when entering or refreshing.
-    
+    window.scrollTo(0, 0); //Makes sure we always scroll to the to when entering or refreshing.
+
     const split = SplitText.create(".welcome-text", {
       type: "chars",
     });
@@ -42,6 +42,11 @@ export default function Contact() {
       duration: 0.5,
       stagger: 0.05,
       ease: "power3.inOut",
+    }).to(".linkedIn-logo, .github-logo, .email, .phone, .list-div", {
+      opacity: 1,
+      scale: 1,
+      stagger: 0.2,
+      ease: "power3.inOut"
     });
   }, []);
   return (
@@ -57,7 +62,7 @@ export default function Contact() {
         />
         <section className="flex flex-col gap-10 box-border w-full items-center">
           <img
-            src="src\assets\IMG_5357.PNG"
+            src="src\assets\PortPhoto.JPG"
             alt=""
             className="w-60 rounded image-contact"
           />

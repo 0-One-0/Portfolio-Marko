@@ -21,6 +21,7 @@ export default function About() {
   };
 
   useGSAP(()=> {
+    window.scrollTo(0, 0);
     gsap.set([SkillRef.current, LIARef.current, CVRef.current, titleRef.current, futureRef.current], {
       opacity:0,
     })
@@ -43,7 +44,7 @@ export default function About() {
   return (
     <>
       <div className="body grid-bg border-box gap-10 flex flex-col m-0 w-full min-h-dvh overflow-x-hidden p-2 pb-10 items-center">
-        <h1 className="font-marker text-white text-shadow-2xs text-5xl page-title">About</h1>
+        
           <FloppyDisk
                   title={"Home"}
                   bgColor={"bg-black"}
