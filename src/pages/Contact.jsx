@@ -4,6 +4,7 @@ import { SplitText } from "gsap/SplitText";
 import { GithubIcon } from "@dev.icons/react";
 import FloppyDisk from "../components/FloppyDisk";
 import { useGSAP } from "@gsap/react";
+import Profile from "../assets/PortPhoto2.0.jpeg";
 
 gsap.registerPlugin(SplitText);
 export default function Contact() {
@@ -62,7 +63,7 @@ export default function Contact() {
         />
         <section className="flex flex-col gap-10 box-border w-full items-center">
           <img
-            src="src\assets\PortPhoto.JPG"
+            src={Profile}
             alt=""
             className="w-60 rounded image-contact"
           />

@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import Profile from "../assets/PortPhoto2.0.jpeg";
 
 export default function Hero() {
   const introRef = useRef(null);
@@ -46,7 +47,7 @@ export default function Hero() {
   return (
     <>
       <img
-        src="src\assets\PortPhoto.JPG"
+        src={Profile}
         alt="Marko"
         className="w-70 rounded-lg mb-3 marko-img"
       />

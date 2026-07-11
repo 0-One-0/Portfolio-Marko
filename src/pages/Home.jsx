@@ -24,7 +24,21 @@ export default function Home() {
   useGSAP(() => {
     // Initierar all scroll-logik när komponenten mountas
     // Alla refs är klara här eftersom useGSAP körs efter rendering
+      gsap.set(PCRef.current, {
+      display:"none",
+      scale: 0,
+      opacity: 0,
+    });
+
     const smoother = initScroll(HeroRef, PCRef);
+  
+    gsap.to(PCRef.current, {
+      display:"flex",
+      delay: 1,
+      scale: 1,
+      opacity: 1,
+      ease: "power3.inOut",
+    })
 
     // Cleanup — körs när komponenten unmountas (t.ex. när man navigerar till en annan sida)
     return () => {

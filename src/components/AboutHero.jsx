@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Profile from "../assets/PortPhoto2.0.jpeg";
 
 export default function AboutHero() {
   useGSAP(() => {
@@ -17,7 +18,7 @@ export default function AboutHero() {
     <>
       <div className="flex flex-row items-center justify-center gap-4 pt-10 ">
         <img
-          src="src\assets\PortPhoto.JPG"
+          src={Profile}
           alt=""
           className="img w-50 rounded-sm "
         />
