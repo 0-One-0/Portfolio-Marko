@@ -14,7 +14,7 @@ export const projects = [
     title: "Portfolio",
     description:
       "A retro-themed personal portfolio built with a floppy disk navigation concept. Features GSAP animations, scroll snapping and a custom CRT computer component.",
-    link: "http://localhost:5173/",
+    link: "https://portfolio-marko-antonio.netlify.app/",
     image: PC,
     areas: ["React", "Vite", "Gsap", "React-Router", "Tailwind"],
   }
