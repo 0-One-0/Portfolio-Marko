@@ -20,7 +20,7 @@ export const projects = [
     areas: ["React", "Vite", "Gsap", "React-Router", "Tailwind"],
   },
   {
-    title: "RecipeMe",
+    title: "RecipeMe - Under development",
     description:
       "a digital recipe book with a random-pick feature for the days you can't be bothered to decide what to eat. React app with a Supabase backend, authentication, and smooth GSAP animations.",
     link: "https://recipemebeta.netlify.app/",
