@@ -1,5 +1,6 @@
 import Flowly from "../assets/Flowly.png";
 import PC from "../assets/PC.png";
+import RecipeMe from "../assets/RecipeMe.png";
 
 export const projects = [
   {
@@ -17,5 +18,13 @@ export const projects = [
     link: "https://portfolio-marko-antonio.netlify.app/",
     image: PC,
     areas: ["React", "Vite", "Gsap", "React-Router", "Tailwind"],
+  },
+  {
+    title: "RecipeMe",
+    description:
+      "a digital recipe book with a random-pick feature for the days you can't be bothered to decide what to eat. React app with a Supabase backend, authentication, and smooth GSAP animations.",
+    link: "https://recipemebeta.netlify.app/",
+    image: RecipeMe,
+    areas: ["React", "Vite", "Gsap", "React-Router", "Js", "Html", "Css"],
   }
 ];
