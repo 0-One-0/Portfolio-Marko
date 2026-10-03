@@ -74,7 +74,7 @@ export default function Contact() {
             <ol className="flex gap-5 justify-center">
               <li>
                 <a
-                  href="www.linkedin.com/in/marko-antonio-l-241009208"
+                  href="https://www.linkedin.com/in/marko-antonio-l-241009208"
                   target="_blank"
                   className=" w-12 h-12 bg-white flex rounded-2xl items-center justify-center linkedIn-logo"
                 >
